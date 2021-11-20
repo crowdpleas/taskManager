@@ -1,12 +1,14 @@
-html{
+html {
     background-color: #A3A39E;
 }
-body{
-    background-color: #EEF0F3!important;
+
+body {
+    background-color: #EEF0F3 !important;
     width: 1920px;
     height: 1080px;
 }
-form{
+
+form {
     background: #2FCC9A;
     border: 2px solid #228e6c;
     border-radius: 10px;
@@ -14,15 +16,18 @@ form{
     margin: auto auto;
     width: 25% !important;
 }
-#task{
+
+#task {
     width: 60%;
     float: left;
     margin-right: 5px;
 }
-#container{
+
+#container {
     position: center;
 }
-#task_tracker{
+
+#task_tracker {
     margin: 20px auto;
     padding: 0 15%;
     text-align: center;

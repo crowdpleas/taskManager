@@ -25,24 +25,20 @@
             $tasks = $sql->fetchAll();
             foreach ($tasks as $task) {
                 $task['id'] = $task['id'] - 37;
-                echo "<br><h1>" . $task['id'] . ") " . $task['text'] . "( <strong style='color:red;'>" . $task['user_name']. "</strong>" . ") </h1>";
+                echo "<br><h1>" . $task['id'] . ") " . $task['text'] . "( <strong style='color:red;'>" . $task['user_name'] . "</strong>" . ") </h1>";
             }
-             ?>
+            ?>
         </div>
         <div class="col-4">Users
             <?php
-                $sql=$pdo->prepare("select distinct user_name from tasks");
-                $sql->execute();
-                $userNames=$sql->fetchAll();
-                foreach($userNames as $userName){
-                    echo "<br><h1>" . $userName['user_name'] . "</h1>";
-                }
+            $sql = $pdo->prepare("select distinct user_name from tasks");
+            $sql->execute();
+            $userNames = $sql->fetchAll();
+            foreach ($userNames as $userName) {
+                echo "<br><h1>" . $userName['user_name'] . "</h1>";
+            }
             ?>
         </div>
-        <!--//повторити цикл foreach .Зробити 3 параши з його  допомогою-->
-        <!--//конкатанация строк-->
-        <!--//добавити в табличку столбец user_name добавляти красним-->
-        <!--//-->
     </div>
 </div>
 </body>
