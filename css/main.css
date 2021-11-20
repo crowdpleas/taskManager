@@ -1,0 +1,29 @@
+html{
+    background-color: #A3A39E;
+}
+body{
+    background-color: #EEF0F3!important;
+    width: 1920px;
+    height: 1080px;
+}
+form{
+    background: #2FCC9A;
+    border: 2px solid #228e6c;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: auto auto;
+    width: 25% !important;
+}
+#task{
+    width: 60%;
+    float: left;
+    margin-right: 5px;
+}
+#container{
+    position: center;
+}
+#task_tracker{
+    margin: 20px auto;
+    padding: 0 15%;
+    text-align: center;
+}
