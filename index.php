@@ -27,16 +27,8 @@
                 $task['id'] = $task['id'] - 37;
                 echo "<br><h1>" . $task['id'] . ") " . $task['text'] . "( <strong style='color:red;'>" . $task['user_name']. "</strong>" . ") </h1>";
             }
-            //        $pdo = getConnection();
-            //        $sql1 = $pdo->prepare("select user_name from tasks");
-            //        $sql1->execute();
-            //        $users = $sql1->fetchAll();
-            //        foreach ($users as $user){
-            //            echo "<br><h7></h7>".$user['user_name'].") </h7>";
-            //        }
-            ?>
+             ?>
         </div>
-
         <div class="col-4">Users
             <?php
                 $sql=$pdo->prepare("select distinct user_name from tasks");
