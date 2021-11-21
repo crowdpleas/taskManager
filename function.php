@@ -1,17 +1,12 @@
 <?php
-
-    if(isset($_POST['number1']) && isset($_POST['number2']) && isset($_POST['number3'])){
-        $number1 = $_POST['number1'];
-        $number2 = $_POST['number2'];
-        $number3 = $_POST['number3'];
-        $summ = $number1+$number2;
-        $multiply = $summ*$number3;
-        function getResult($summ,$multiply)
-        {
-            $result = $multiply-$summ;
-            return $result;
-        }
-        header('Location:/dust2');
-        }
-
-
+    function getSumm(){
+        $summ=$number1+$number2;
+    }
+    function getMultiply(){
+        $multiply=$summ*$number3;
+    }
+// Hаписати функцію яка приймає результати цих фунцій робить шось з ними я вибрав вычитание от второго первое
+    function getResult(){
+        $result=$multiply-$summ;
+        return $result;
+    }
