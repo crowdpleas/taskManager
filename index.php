@@ -19,6 +19,7 @@
         <div class="col-8">
             <?php
             require_once 'configDB.php';
+            require_once 'function.php';
             $pdo = getConnection();
             $sql = $pdo->prepare("select * from tasks");
             $sql->execute();
@@ -38,6 +39,32 @@
                 echo "<br><h1>" . $userName['user_name'] . "</h1>";
             }
             ?>
+        </div>
+    </div>
+    <div class="container" id="col-2" style="text-align: center"><strong>Functions</strong>
+        <div class="container" id="containerWithFunctions">
+            <div class="row">
+                <div class="col"><strong>Введите два числа<br>Получаем сумму чисел</strong>
+                    <form action="function.php" method="post" id="form1">
+                        <input type="text" name="number1"  id="num1">
+                        <input type="text" name="number2"  id="num2">
+                        <button class="btn btn-success" type="submit" name="sendnumber" id="but1">Отправить</button>
+                    </form>
+                </div>
+                <div class="col"><strong>Введите одно число</strong>
+                    <form action="function.php" method="post">
+                        <input type="number" name="number3" id="num3">
+                        <button class="btn btn-success" type="submit" name="sendnumber2" id="but2">Отправить</button>
+                    </form>
+                </div>
+                <div class="col"><strong>Результат суммы первых чисел<br>и произведенние умножения суммы на второе число</strong>
+                    <?php
+                    require_once'function.php';
+                    $resultat1 = getResult();
+                    echo $resultat1;
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

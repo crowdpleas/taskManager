@@ -32,3 +32,22 @@ form {
     padding: 0 15%;
     text-align: center;
 }
+#col-2{
+    width: 1320px;
+
+}
+#form1{
+    width: 600px;
+}
+#num1, #num2, #num3{
+    width: 90px;
+}
+
+#but1, #but2{
+    color: black;
+    background: #A3A39E;
+    width: 90px;
+}
+#containerWithFunctions{
+    width: 1320px;
+}
