@@ -10,10 +10,11 @@ function newUser($name, $age, $job = null)
     }
     return ['name' => $name, "age" => $age ];
 }
-$arr[] = newUser('Sasha', 17);
-function deleteUser($arr,$offset=0){
-    return ($arr = array_splice($arr,$offset));
+function deleteUser($arr,$delIndex=0){
+    return array_splice($arr,$delIndex);
 }
+$arr[] = newUser('Sasha', 17);
+// значение delIndex указывает сколько элементов массива нужно удалить.Счет начинаеться с конца массива те - 0 ничего не удалит, 1 удалит последний элемент, 2 последний и пред последний и тд.
 $arr = deleteUser($arr, 0);
 print_r($arr);
 
