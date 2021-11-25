@@ -10,15 +10,16 @@ function newUser($name, $age, $job = null)
     }
     return ['name' => $name, "age" => $age ];
 }
-function deleteUser($arr,$delIndex=0){
-    return array_splice($arr,$delIndex);
+function deleteUser(&$arr,$delIndex,$lenght)
+{
+      return array_splice($arr,$delIndex,$lenght);
 }
 $arr[] = newUser('Sasha', 17);
 // значение delIndex указывает сколько элементов нужно удалить
 // счет начинаеться от нуля .те если $delIndex(2) мы удалим 2 элемента массива array[0,1]
 //после удаленния индекс сдвигается .те если раньше 3 элемент массива был под индексом [2] то после удаления элементов которые были впереди него -
 //[0,1] данному элементу присвоим новое значенние [0] тк впереди него больше нету элементнов и теперь его можно считать первым элементом
-$arr = deleteUser($arr, 2);
+deleteUser($arr, 2,1);
 print_r($arr);
 
 //foreach ($arr as $user){
