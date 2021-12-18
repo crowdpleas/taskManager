@@ -14,13 +14,31 @@ function deleteUser(&$arr,$delIndex,$lenght)
 {
       return array_splice($arr,$delIndex,$lenght);
 }
-$arr[] = newUser('Sasha', 17);
-deleteUser($arr, 2,1);
+//function editUser($arr, $key, $name, $age, $job){
+$arr2 = [['name'=>'vasya','age'=>25,'job'=>'bomj'],
+         ['name'=>'volodya','age'=>31,'job'=>'student'],
+         ['name'=>'viktor','age'=>19,'job'=>'teacher']];
+function editUser(&$arr2, $id, $name, $age, $job){
+    $arr2[$id] = ['name' => $name,'age'=>$age,'job'=>$job];
+    //$arr2[$id] = ['age'=>$age];
+    //$arr2[$id] = ['job'=>$job];
+}
+
+$arr[] = newUser('Dimka', 19, 'zavod');
+$arr[] = newUser('Oleg',17,'bussinesment');
+//deleteUser($arr, 2,1);
+//$arr[] = editUser($arr, 1, 'dima',18,'zavod');
+echo "<pre>";
 print_r($arr);
-
-//foreach ($arr as $user){
-//        foreach ($user as $key => $value){
-//            echo $value."</br>";
-//        }
-//}
-
+echo "</pre>";
+echo "<pre>";
+print_r($arr[2]);
+echo "</pre>";
+echo "<pre>";
+print_r($arr2);
+echo "</pre>";
+echo "<pre>";
+$arr2[] = editUser($arr2, 1,'oleg',25,'reporter');
+print_r($arr2);
+echo "</pre>";
+;
