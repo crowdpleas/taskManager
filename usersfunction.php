@@ -21,17 +21,17 @@ function editUser($arr, $id, $name, $age, $job = null)
 {
     if ($age >= 18 && $job != null){
         $arr[$id] = ['name' => $name,'age' => $age,'job' => $job];
-        return $arr = $arr;
+        return $arr;
     }
     $arr[$id] = ['name' => $name, 'age' => $age];
-    return $arr = $arr;
+    return $arr;
 }
 $arr[] = newUser('Dimka', 19, 'zavod');
 $arr[] = newUser('Oleg',19,'bussinesment');
 //deleteUser($arr, 2,1);
 //$arr[] = editUser($arr, 1, 'dima',18,'zavod');
 echo "<pre>";
-$arr = editUser($arr,3,'dimka',16,'teacher');
+$arr = editUser($arr,3,'dimka',18,'teacher');
 print_r($arr);
 echo "</pre>";
 echo "<pre>";
