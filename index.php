@@ -25,7 +25,7 @@
             $sql->execute();
             $tasks = $sql->fetchAll();
             foreach ($tasks as $task) {
-                $task['id'] = $task['id'] - 37;
+                $task['id'] = $task['id'] -40;
                 echo "<br><h1>" . $task['id'] . ") " . $task['text'] . "( <strong style='color:red;'>" . $task['user_name'] . "</strong>" . ") </h1>";
             }
             ?>
